@@ -98,6 +98,10 @@ export default {
         this.errorMsg = "Please fill the required fields";
         return 0;
       }
+      if(!(this.empData.email).includes("@example.")){
+        this.errorMsg = "Please Enter valid Email (ex : @example)";
+        return 0;
+      }
       try {
         if (this.empData.id) {
           let sendData = { ...this.empData };

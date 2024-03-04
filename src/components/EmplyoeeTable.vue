@@ -58,7 +58,8 @@ export default {
         let data = await axios.get(
           "https://65e6071ed7f0758a76e7fcba.mockapi.io/vue/employee"
         );
-        this.empData = data?.data;
+        let tempdata= (data.data).sort((a,b)=> b.id-a.id);
+        this.empData = tempdata;
       } catch (error) {
         console.log(error);
       }
